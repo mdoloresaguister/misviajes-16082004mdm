@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Viajes</title>
+
+    <!-- CSS del proyecto -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet CSS y JS (Mapa) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+    <!-- Leaflet MarkerCluster CSS y JS (Agrupación de marcadores) -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
+    <!-- JS Principal del proyecto con defer -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -58,7 +65,6 @@
                             Mi mapa del mundo...
                         </button>
                         <button onclick="abrirModalEstadisticas()" class="btn-estadisticas"> Por Continentes </button>
-                        <!-- BOTÓN PARA ABRIR RESUMEN GLOBAL -->
                         <button onclick="abrirModalGlobal()" class="btn-estadisticas btn-global"> Global Países </button>
                         <button id="btn-timeline" class="btn-header"> Timeline</button>
                     </div>
@@ -71,16 +77,19 @@
             </div>
         </div>
     </header>
+
     <main>
-        <!-- Aquí es donde JavaScript meterá las tarjetas automáticamente -->
+        <!-- Contenedor dinámico de tarjetas inyectadas por JS -->
         <div id="contenedor-viajes" class="grid-viajes"></div>
     </main>
 
-
+    <!-- VENTANA MODAL PARA AMPLIAR IMÁGENES -->
     <div id="ventana-modal" class="modal" onclick="cerrarImagen()">
         <span class="cerrar">&times;</span>
-        <img class="contenido-modal" id="imagen-maximizada">
+        <img class="contenido-modal" id="imagen-maximizada" alt="Imagen ampliada">
     </div>
+
+    <!-- VENTANA MODAL MAPA DEL MUNDO -->
     <div id="modal-mapa"
         style="position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100vh; background-color: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center;">
         <div
@@ -96,9 +105,11 @@
             <div id="mapa-modal-container" style="flex-grow: 1; width: 100%; height: 100%;"></div>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
     <button id="btn-subir" class="btn-scroll-top" title="Volver arriba">▲</button>
-    <!-- VENTANA MODAL DE ESTADÍSTICAS -->
+
+    <!-- VENTANA MODAL DE ESTADÍSTICAS POR CONTINENTE -->
     <div id="modal-estadisticas" class="modal-overlay">
         <div class="modal-contenido-est">
             <span class="cerrar-modal" onclick="cerrarModalEstadisticas()">&times;</span>
@@ -107,7 +118,6 @@
             <p class="subtitulo-est">Estadísticas por continentes</p>
 
             <div class="lista-estadisticas">
-                <!-- Mundo / Total -->
                 <div class="item-est">
                     <div class="info-est">
                         <span>Mundo</span>
@@ -118,7 +128,6 @@
                     </div>
                 </div>
 
-                <!-- Europa -->
                 <div class="item-est">
                     <div class="info-est">
                         <span>Europa</span>
@@ -129,7 +138,6 @@
                     </div>
                 </div>
 
-                <!-- América (Norte y Sur) -->
                 <div class="item-est">
                     <div class="info-est">
                         <span>América</span>
@@ -140,7 +148,6 @@
                     </div>
                 </div>
 
-                <!-- Asia -->
                 <div class="item-est">
                     <div class="info-est">
                         <span>Asia</span>
@@ -151,7 +158,6 @@
                     </div>
                 </div>
 
-                <!-- África -->
                 <div class="item-est">
                     <div class="info-est">
                         <span>África</span>
@@ -165,7 +171,7 @@
         </div>
     </div>
 
-    <!-- VENTANA MODAL RESUMEN GLOBAL (ESTILO BEEN) -->
+    <!-- VENTANA MODAL RESUMEN GLOBAL -->
     <div id="modal-global" class="modal-overlay">
         <div class="modal-contenido-est tarjeta-global">
             <span class="cerrar-modal" onclick="cerrarModalGlobal()">&times;</span>
@@ -173,18 +179,15 @@
             <h3 class="titulo-global">En Total</h3>
 
             <div class="card-resumen-mundo">
-                <!-- Izquierda: Porcentaje -->
                 <div class="bloque-stat">
                     <span id="pct-global-num" class="numero-destacado">0%</span>
                     <span class="etiqueta-stat">Mundo</span>
                 </div>
 
-                <!-- Centro: Gráfico Circular -->
                 <div class="grafico-donut-container">
                     <div id="grafico-donut" class="grafico-donut"></div>
                 </div>
 
-                <!-- Derecha: Cantidad de Países -->
                 <div class="bloque-stat">
                     <span id="total-paises-num" class="numero-destacado">0</span>
                     <span class="etiqueta-stat">Países</span>
@@ -195,19 +198,17 @@
         </div>
     </div>
 
-
-    <!-- MODAL TIMELINE (Colocar al final del <body>) -->
-<div id="modal-timeline" class="modal-overlay">
-    <div class="modal-contenido-timeline">
-        <span class="cerrar-modal" id="cerrar-timeline">&times;</span>
-        <h3 class="titulo-timeline">Timeline de Viajes</h3>
-        
-        <!-- Contenedor dinámico de la línea de tiempo -->
-        <div class="contenedor-timeline" id="timeline-lista">
-            <!-- JS inyectará el contenido ordenado por años aquí -->
+    <!-- MODAL TIMELINE -->
+    <div id="modal-timeline" class="modal-overlay">
+        <div class="modal-contenido-timeline">
+            <span class="cerrar-modal" id="cerrar-timeline">&times;</span>
+            <h3 class="titulo-timeline">Timeline de Viajes</h3>
+            
+            <div class="contenedor-timeline" id="timeline-lista">
+                <!-- Inyectado por script.js -->
+            </div>
         </div>
     </div>
-</div>
 
 </body>
 
