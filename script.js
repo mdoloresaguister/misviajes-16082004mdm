@@ -893,8 +893,11 @@ window.misViajes = [
     }
 ];
 
-// 2. FUNCIÓN PRINCIPAL - UBICACIÓN DE ETIQUETAS MEJORADA PARA EVITAR CORTES
-function cargarViajes(viajesAMostrar = misViajes) {
+// Variable global declarada de forma segura para evitar re-declaraciones
+window.mapaModalInstance = window.mapaModalInstance || null;
+
+// 2. FUNCIÓN PRINCIPAL - UBICACIÓN DE ETIQUETAS MEJORADA
+function cargarViajes(viajesAMostrar = window.misViajes) {
     const contenedor = document.getElementById("contenedor-viajes");
     
     if (!contenedor) {
@@ -958,12 +961,12 @@ function cargarViajes(viajesAMostrar = misViajes) {
     });
 }
 
-// 3. NUEVA FUNCIÓN: Genera las opciones del buscador de años automáticamente
+// 3. GENERADOR DE OPCIONES DEL BUSCADOR DE AÑOS
 function configurarBuscadorAnos() {
     const selector = document.getElementById("filtro-ano");
     if (!selector) return;
     
-    const anosUnicos = [...new Set(misViajes.map(viaje => viaje.fecha.slice(-4)))];
+    const anosUnicos = [...new Set(window.misViajes.map(viaje => viaje.fecha.slice(-4)))];
     anosUnicos.sort((a, b) => b - a);
 
     anosUnicos.forEach(ano => {
@@ -1026,21 +1029,12 @@ function cerrarImagen() {
     if (modal) modal.style.display = "none";
 }
 
-// Al cargar la web, inicializamos las tarjetas y el selector de años
-window.onload = function() {
-    configurarBuscadorAnos();
-    cargarViajes();
-};
-
 // CONTROL DEL CARRUSEL DEL ENCABEZADO
 function iniciarCarruselHeader() {
     const slides = document.querySelectorAll('.header-carrusel .slide');
     let indiceActual = 0;
 
-    if (slides.length === 0) {
-        console.warn("Alerta Carrusel: No se encontraron elementos con la clase '.slide' dentro de '.header-carrusel'.");
-        return; 
-    }
+    if (slides.length === 0) return; 
 
     slides.forEach((s, idx) => {
         if (idx === 0) s.classList.add('activa');
@@ -1052,12 +1046,6 @@ function iniciarCarruselHeader() {
         indiceActual = (indiceActual + 1) % slides.length;
         slides[indiceActual].classList.add('activa');
     }, 4000);
-}
-
-if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", iniciarCarruselHeader);
-} else {
-    iniciarCarruselHeader();
 }
 
 // LÓGICA DEL BOTÓN VOLVER ARRIBA
@@ -1074,37 +1062,28 @@ function controlarBotonSubir() {
     });
 
     btnSubir.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    controlarBotonSubir();
-});
-
-let mapaModalInstance = null;
 
 function abrirModalMapa() {
     const modal = document.getElementById('modal-mapa');
     if (!modal) return;
     modal.style.display = 'flex';
 
-    if (mapaModalInstance) {
-        setTimeout(() => { mapaModalInstance.invalidateSize(); }, 200);
+    if (window.mapaModalInstance) {
+        setTimeout(() => { window.mapaModalInstance.invalidateSize(); }, 200);
         return;
     }
 
     setTimeout(() => {
-        mapaModalInstance = L.map('mapa-modal-container').setView([40.4167, -3.7037], 5);
+        window.mapaModalInstance = L.map('mapa-modal-container').setView([40.4167, -3.7037], 5);
 
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; OpenStreetMap &copy; CARTO',
             subdomains: 'abcd',
             maxZoom: 20
-        }).addTo(mapaModalInstance);
+        }).addTo(window.mapaModalInstance);
 
         const iconoVerdeHtml = `
             <div style="background-color: #2d4a43; width: 14px; height: 14px; border-radius: 50%; border: 3px solid #ffffff; box-shadow: 0 0 4px rgba(0,0,0,0.5);"></div>
@@ -1123,8 +1102,8 @@ function abrirModalMapa() {
             zoomToBoundsOnClick: true
         });
 
-        if (typeof misViajes !== 'undefined') {
-            misViajes.forEach(viaje => {
+        if (typeof window.misViajes !== 'undefined') {
+            window.misViajes.forEach(viaje => {
                 if (viaje.lat && viaje.lng) {
                     const marcador = L.marker([viaje.lat, viaje.lng], { icon: marcadorVerde });
                     const anoText = viaje.fecha ? viaje.fecha.slice(-4) : '';
@@ -1141,10 +1120,10 @@ function abrirModalMapa() {
                     grupoMarcadores.addLayer(marcador);
                 }
             });
-            mapaModalInstance.addLayer(grupoMarcadores);
+            window.mapaModalInstance.addLayer(grupoMarcadores);
         }
         
-        mapaModalInstance.invalidateSize();
+        window.mapaModalInstance.invalidateSize();
     }, 200);
 }
 
@@ -1162,7 +1141,7 @@ window.addEventListener('click', (e) => {
 
 // LÓGICA DE LA VENTANA DE ESTADÍSTICAS
 function calcularEstadisticasViajes() {
-    if (typeof misViajes === 'undefined') return;
+    if (typeof window.misViajes === 'undefined') return;
 
     const TOTAL_MUNDO = 195;
     const TOTAL_EUROPA = 44;
@@ -1176,7 +1155,7 @@ function calcularEstadisticasViajes() {
     let asia = new Set();
     let africa = new Set();
 
-    misViajes.forEach(v => {
+    window.misViajes.forEach(v => {
         if (!v.lat || !v.lng) return;
 
         const dest = v.destino.toUpperCase();
@@ -1254,12 +1233,12 @@ function obtenerPaisDelDestino(viaje) {
 
 // LÓGICA DEL RESUMEN GLOBAL
 function calcularResumenGlobal() {
-    if (typeof misViajes === 'undefined') return;
+    if (typeof window.misViajes === 'undefined') return;
 
     const TOTAL_PAISES_ONU = 195;
     let paisesUnicos = new Set();
 
-    misViajes.forEach(v => {
+    window.misViajes.forEach(v => {
         if (v.destino) {
             let pais = obtenerPaisDelDestino(v);
             paisesUnicos.add(pais);
@@ -1291,8 +1270,13 @@ function cerrarModalGlobal() {
     if (modal) modal.classList.remove("activo");
 }
 
-// --- FUNCIONALIDAD MODAL TIMELINE ---
+// EVENTOS INICIALES AL CARGAR EL DOM
 document.addEventListener('DOMContentLoaded', () => {
+    configurarBuscadorAnos();
+    cargarViajes();
+    iniciarCarruselHeader();
+    controlarBotonSubir();
+
     const btnTimeline = document.getElementById('btn-timeline');
     const modalTimeline = document.getElementById('modal-timeline');
     const cerrarTimeline = document.getElementById('cerrar-timeline');
@@ -1323,8 +1307,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!timelineLista) return;
         timelineLista.innerHTML = ''; 
 
-        let listaDatos = [];
-        if (typeof misViajes !== 'undefined') listaDatos = misViajes;
+        let listaDatos = window.misViajes || [];
 
         if (!listaDatos || listaDatos.length === 0) {
             timelineLista.innerHTML = '<p style="text-align:center; color:#84a59d; padding:20px;">No se encontraron viajes para mostrar.</p>';
@@ -1427,40 +1410,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-// ==========================================
-// FUNCIÓN DE EXPORTACIÓN (AFUERA Y GLOBAL)
-// ==========================================
-// ==========================================
-// FUNCIÓN DE EXPORTACIÓN COMPATIBLE CON GITHUB
-// ==========================================
+// FUNCIÓN DE EXPORTACIÓN REGISTRADA DE FORMA GLOBAL Y SEGURA
 window.exportarAJSON = function() {
     try {
-        // 1. Validar que la variable de viajes existe y tiene datos
-        if (typeof misViajes === 'undefined' || !misViajes || misViajes.length === 0) {
+        if (typeof window.misViajes === 'undefined' || !window.misViajes || window.misViajes.length === 0) {
             alert('No hay información de viajes disponible para exportar.');
             return;
         }
 
-        // 2. Convertir el objeto a texto JSON
-        const jsonString = JSON.stringify(misViajes, null, 2);
-
-        // 3. Crear un Blob (un archivo binario en memoria)
+        const jsonString = JSON.stringify(window.misViajes, null, 2);
         const blob = new Blob([jsonString], { type: "application/json;charset=utf-8;" });
-
-        // 4. Crear la URL temporal para descargar el Blob
         const url = URL.createObjectURL(blob);
 
-        // 5. Crear el enlace invisible de descarga
         const downloadAnchor = document.createElement('a');
         downloadAnchor.href = url;
         downloadAnchor.download = "mis_viajes.json";
 
-        // 6. Ejecutar descarga y limpiar recursos
         document.body.appendChild(downloadAnchor);
         downloadAnchor.click();
         
-        // Limpieza del DOM y liberación de memoria
         document.body.removeChild(downloadAnchor);
         URL.revokeObjectURL(url);
 
