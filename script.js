@@ -1431,22 +1431,41 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 // FUNCIÓN DE EXPORTACIÓN (AFUERA Y GLOBAL)
 // ==========================================
+// ==========================================
+// FUNCIÓN DE EXPORTACIÓN COMPATIBLE CON GITHUB
+// ==========================================
 window.exportarAJSON = function() {
-    // 1. Validar que la variable de viajes existe y tiene datos
-    if (typeof misViajes === 'undefined' || !misViajes || misViajes.length === 0) {
-        alert('No hay información de viajes disponible para exportar.');
-        return;
-    }
+    try {
+        // 1. Validar que la variable de viajes existe y tiene datos
+        if (typeof misViajes === 'undefined' || !misViajes || misViajes.length === 0) {
+            alert('No hay información de viajes disponible para exportar.');
+            return;
+        }
 
-    // 2. Crear la cadena JSON
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(misViajes, null, 2));
-    
-    // 3. Crear enlace virtual y simular click de descarga
-    const downloadAnchor = document.createElement('a');
-    downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", "mis_viajes.json");
-    
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
+        // 2. Convertir el objeto a texto JSON
+        const jsonString = JSON.stringify(misViajes, null, 2);
+
+        // 3. Crear un Blob (un archivo binario en memoria)
+        const blob = new Blob([jsonString], { type: "application/json;charset=utf-8;" });
+
+        // 4. Crear la URL temporal para descargar el Blob
+        const url = URL.createObjectURL(blob);
+
+        // 5. Crear el enlace invisible de descarga
+        const downloadAnchor = document.createElement('a');
+        downloadAnchor.href = url;
+        downloadAnchor.download = "mis_viajes.json";
+
+        // 6. Ejecutar descarga y limpiar recursos
+        document.body.appendChild(downloadAnchor);
+        downloadAnchor.click();
+        
+        // Limpieza del DOM y liberación de memoria
+        document.body.removeChild(downloadAnchor);
+        URL.revokeObjectURL(url);
+
+    } catch (error) {
+        console.error("Error al exportar el JSON:", error);
+        alert("Hubo un error al intentar generar la descarga del archivo.");
+    }
 };
