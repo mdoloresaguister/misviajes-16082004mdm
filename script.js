@@ -1426,3 +1426,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+// ==========================================
+// FUNCIÓN DE EXPORTACIÓN (AFUERA Y GLOBAL)
+// ==========================================
+window.exportarAJSON = function() {
+    // 1. Validar que la variable de viajes existe y tiene datos
+    if (typeof misViajes === 'undefined' || !misViajes || misViajes.length === 0) {
+        alert('No hay información de viajes disponible para exportar.');
+        return;
+    }
+
+    // 2. Crear la cadena JSON
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(misViajes, null, 2));
+    
+    // 3. Crear enlace virtual y simular click de descarga
+    const downloadAnchor = document.createElement('a');
+    downloadAnchor.setAttribute("href", dataStr);
+    downloadAnchor.setAttribute("download", "mis_viajes.json");
+    
+    document.body.appendChild(downloadAnchor);
+    downloadAnchor.click();
+    downloadAnchor.remove();
+};

@@ -24,7 +24,7 @@
 
 <body>
 
-    <header class="header-carrusel">
+   <header class="header-carrusel">
         <div class="carrusel-slides">
             <div class="slide activa" style="background-image: url('imagenes/encabezado1.png');"></div>
             <div class="slide" style="background-image: url('imagenes/encabezado2.png');"></div>
@@ -36,41 +36,32 @@
             <h1>Mis Viajes</h1>
             <p style="margin: 5px 0 15px 0; font-size: 1.1rem; opacity: 0.9;">Recuerdos y Aventuras</p>
 
-            <div class="barra-filtros"
-                style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; gap: 20px; flex-wrap: wrap;">
+            <div class="barra-filtros">
 
-                <div class="filtro-izquierdo"
-                    style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+                <div class="filtro-izquierdo">
 
-                    <div style="display: flex; align-items: center; justify-content: flex-start; width: 100%;">
-                        <label for="filtro-ano"
-                            style="min-width: 140px; text-align: left; display: inline-block;">Filtrar por año: </label>
+                    <div>
+                        <label for="filtro-ano">Filtrar por año: </label>
                         <select id="filtro-ano" onchange="filtrarViajes()">
                             <option value="todos">Todos los años</option>
                         </select>
                     </div>
 
-                    <div style="display: flex; align-items: center; justify-content: flex-start; width: 100%;">
-                        <label for="buscador-texto"
-                            style="min-width: 140px; text-align: left; display: inline-block;">Filtrar por destino:
-                        </label>
-                        <input type="text" id="buscador-texto" oninput="filtrarViajes()"
-                            placeholder="Escribe un destino..."
-                            style="padding: 5px 10px; border-radius: 8px; border: 1px solid #ffffff; background-color: rgba(255, 255, 255, 0.9); color: #2d4a43; font-weight: bold; outline: none; width: 180px;">
+                    <div>
+                        <label for="buscador-texto">Filtrar por destino: </label>
+                        <input type="text" id="buscador-texto" oninput="filtrarViajes()" placeholder="Escribe un destino...">
                     </div>
 
-                    <div style="margin-top: 5px;">
-                        <button onclick="abrirModalMapa()" class="btn-mundo"
-                            style="background: none; border: none; color: #ffffff; font-size: 0.9rem; font-weight: bold; text-decoration: underline; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding: 0;">
-                            Mi mapa del mundo...
-                        </button>
-                        <button onclick="abrirModalEstadisticas()" class="btn-estadisticas"> Por Continentes </button>
-                        <button onclick="abrirModalGlobal()" class="btn-estadisticas btn-global"> Global Países </button>
-                        <button id="btn-timeline" class="btn-header"> Timeline</button>
+                    <div class="grupo-botones-header">
+                        <button onclick="abrirModalMapa()" class="btn-mundo">Mi mapa del mundo...</button>
+                        <button onclick="abrirModalEstadisticas()" class="btn-estadisticas">Por Continentes</button>
+                        <button onclick="abrirModalGlobal()" class="btn-global">Global Países</button>
+                        <button id="btn-timeline" class="btn-timeline">Timeline</button>
+                        <button id="btn-exportar-json" class="btn-exportar" onclick="exportarAJSON()">📥 Exportar JSON</button>
                     </div>
                 </div>
 
-                <div class="contador-viajes" style="margin-bottom: 5px; flex-shrink: 0;">
+                <div class="contador-viajes">
                     Total experiencias: <span id="numero-viajes">0</span>
                 </div>
 

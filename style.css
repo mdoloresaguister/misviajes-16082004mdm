@@ -167,6 +167,7 @@ header {
 .btn-global,
 .btn-mundo,
 .btn-timeline,
+.btn-exportar,
 .filtro-izquierdo a,
 a[href*="mundo"] {
     flex: 1 1 auto;
@@ -197,6 +198,7 @@ a[href*="mundo"] {
 .btn-global:hover,
 .btn-mundo:hover,
 .btn-timeline:hover,
+.btn-exportar:hover,
 .filtro-izquierdo a:hover {
     background: rgba(255, 255, 255, 0.3);
     border-color: rgba(255, 255, 255, 0.6);
@@ -838,3 +840,5 @@ a[href*="mundo"] {
     font-size: 1.2rem;
     line-height: 1;
 }
+
+
