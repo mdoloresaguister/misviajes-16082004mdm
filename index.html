@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Viajes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> 
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-    
+
 </head>
+
 <body>
 
-      <header class="header-carrusel">
-    <div class="carrusel-slides">
-        <div class="slide activa" style="background-image: url('imagenes/encabezado1.png');"></div>
-        <div class="slide" style="background-image: url('imagenes/encabezado2.png');"></div>
-        <div class="slide" style="background-image: url('imagenes/encabezado3.png');"></div>
-        <div class="slide" style="background-image: url('imagenes/encabezado4.png');"></div>
-    </div>
-
-    <div class="contenido-header">
-        <h1>Mis Viajes</h1>
-        <p style="margin: 5px 0 15px 0; font-size: 1.1rem; opacity: 0.9;">Recuerdos y Aventuras</p>
-
-   <div class="barra-filtros" style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; gap: 20px; flex-wrap: wrap;">
-            
-            <div class="filtro-izquierdo" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
-                
-                <div style="display: flex; align-items: center; justify-content: flex-start; width: 100%;">
-                    <label for="filtro-ano" style="min-width: 140px; text-align: left; display: inline-block;">Filtrar por año: </label>
-                    <select id="filtro-ano" onchange="filtrarViajes()">
-                        <option value="todos">Todos los años</option>
-                    </select>
-                </div>
-                
-                <div style="display: flex; align-items: center; justify-content: flex-start; width: 100%;">
-                    <label for="buscador-texto" style="min-width: 140px; text-align: left; display: inline-block;">Filtrar por destino: </label>
-                    <input type="text" id="buscador-texto" oninput="filtrarViajes()" placeholder="Escribe un destino..." style="padding: 5px 10px; border-radius: 8px; border: 1px solid #ffffff; background-color: rgba(255, 255, 255, 0.9); color: #2d4a43; font-weight: bold; outline: none; width: 180px;">
-                </div>
-                
-                <div style="margin-top: 5px;">
-                    <button onclick="abrirModalMapa()" style="background: none; border: none; color: #ffffff; font-size: 0.9rem; font-weight: bold; text-decoration: underline; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding: 0;">
-                        🗺️ POR EL MUNDO...
-                    </button>
-                </div>
-
-            </div>
-
-            <div class="contador-viajes" style="margin-bottom: 5px; flex-shrink: 0;">
-                Total experiencias: <span id="numero-viajes">0</span>
-            </div>
-
+    <header class="header-carrusel">
+        <div class="carrusel-slides">
+            <div class="slide activa" style="background-image: url('imagenes/encabezado1.png');"></div>
+            <div class="slide" style="background-image: url('imagenes/encabezado2.png');"></div>
+            <div class="slide" style="background-image: url('imagenes/encabezado3.png');"></div>
+            <div class="slide" style="background-image: url('imagenes/encabezado4.png');"></div>
         </div>
-    </div>
-</header>
+
+        <div class="contenido-header">
+            <h1>Mis Viajes</h1>
+            <p style="margin: 5px 0 15px 0; font-size: 1.1rem; opacity: 0.9;">Recuerdos y Aventuras</p>
+
+            <div class="barra-filtros"
+                style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; gap: 20px; flex-wrap: wrap;">
+
+                <div class="filtro-izquierdo"
+                    style="display: flex; flex-direction: column; gap: 12px; align-items: flex-start;">
+
+                    <div style="display: flex; align-items: center; justify-content: flex-start; width: 100%;">
+                        <label for="filtro-ano"
+                            style="min-width: 140px; text-align: left; display: inline-block;">Filtrar por año: </label>
+                        <select id="filtro-ano" onchange="filtrarViajes()">
+                            <option value="todos">Todos los años</option>
+                        </select>
+                    </div>
+
+                    <div style="display: flex; align-items: center; justify-content: flex-start; width: 100%;">
+                        <label for="buscador-texto"
+                            style="min-width: 140px; text-align: left; display: inline-block;">Filtrar por destino:
+                        </label>
+                        <input type="text" id="buscador-texto" oninput="filtrarViajes()"
+                            placeholder="Escribe un destino..."
+                            style="padding: 5px 10px; border-radius: 8px; border: 1px solid #ffffff; background-color: rgba(255, 255, 255, 0.9); color: #2d4a43; font-weight: bold; outline: none; width: 180px;">
+                    </div>
+
+                    <div style="margin-top: 5px;">
+                        <button onclick="abrirModalMapa()" class="btn-mundo"
+                            style="background: none; border: none; color: #ffffff; font-size: 0.9rem; font-weight: bold; text-decoration: underline; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; padding: 0;">
+                            Mi mapa del mundo...
+                        </button>
+                        <button onclick="abrirModalEstadisticas()" class="btn-estadisticas"> Por Continentes </button>
+                        <!-- BOTÓN PARA ABRIR RESUMEN GLOBAL -->
+                        <button onclick="abrirModalGlobal()" class="btn-estadisticas btn-global"> Global Países </button>
+                        <button id="btn-timeline" class="btn-header"> Timeline</button>
+                    </div>
+                </div>
+
+                <div class="contador-viajes" style="margin-bottom: 5px; flex-shrink: 0;">
+                    Total experiencias: <span id="numero-viajes">0</span>
+                </div>
+
+            </div>
+        </div>
+    </header>
     <main>
         <!-- Aquí es donde JavaScript meterá las tarjetas automáticamente -->
         <div id="contenedor-viajes" class="grid-viajes"></div>
@@ -68,20 +81,134 @@
         <span class="cerrar">&times;</span>
         <img class="contenido-modal" id="imagen-maximizada">
     </div>
-    <div id="modal-mapa" style="position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100vh; background-color: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center;">
-        <div style="position: relative; background-color: #fbfbfb; width: 92%; height: 85%; max-width: 1400px; border-radius: 12px; box-shadow: 0 4px 25px rgba(0,0,0,0.4); overflow: hidden; display: flex; flex-direction: column;">
-            
-            <div style="padding: 15px 20px; background-color: #2d4a43; color: white; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
+    <div id="modal-mapa"
+        style="position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100vh; background-color: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center;">
+        <div
+            style="position: relative; background-color: #fbfbfb; width: 92%; height: 85%; max-width: 1400px; border-radius: 12px; box-shadow: 0 4px 25px rgba(0,0,0,0.4); overflow: hidden; display: flex; flex-direction: column;">
+
+            <div
+                style="padding: 15px 20px; background-color: #2d4a43; color: white; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;">
                 <h2 style="margin: 0; font-size: 1.2rem; font-family: Arial, sans-serif;">🗺️ Mapa de Experiencias</h2>
-                <button onclick="cerrarModalMapa()" style="background: none; border: none; color: white; font-size: 1.6rem; cursor: pointer; font-weight: bold; line-height: 1; padding: 0 5px;">&times;</button>
+                <button onclick="cerrarModalMapa()"
+                    style="background: none; border: none; color: white; font-size: 1.6rem; cursor: pointer; font-weight: bold; line-height: 1; padding: 0 5px;">&times;</button>
             </div>
-            
+
             <div id="mapa-modal-container" style="flex-grow: 1; width: 100%; height: 100%;"></div>
         </div>
     </div>
     <script src="script.js"></script>
     <button id="btn-subir" class="btn-scroll-top" title="Volver arriba">▲</button>
-</body>
-</html>
+    <!-- VENTANA MODAL DE ESTADÍSTICAS -->
+    <div id="modal-estadisticas" class="modal-overlay">
+        <div class="modal-contenido-est">
+            <span class="cerrar-modal" onclick="cerrarModalEstadisticas()">&times;</span>
 
-  
+            <h2>Resumen de Experiencias</h2>
+            <p class="subtitulo-est">Estadísticas por continentes</p>
+
+            <div class="lista-estadisticas">
+                <!-- Mundo / Total -->
+                <div class="item-est">
+                    <div class="info-est">
+                        <span>Mundo</span>
+                        <span id="pct-mundo" class="porcentaje-num">0%</span>
+                    </div>
+                    <div class="barra-base">
+                        <div id="barra-mundo" class="barra-progreso"></div>
+                    </div>
+                </div>
+
+                <!-- Europa -->
+                <div class="item-est">
+                    <div class="info-est">
+                        <span>Europa</span>
+                        <span id="pct-europa" class="porcentaje-num">0%</span>
+                    </div>
+                    <div class="barra-base">
+                        <div id="barra-europa" class="barra-progreso"></div>
+                    </div>
+                </div>
+
+                <!-- América (Norte y Sur) -->
+                <div class="item-est">
+                    <div class="info-est">
+                        <span>América</span>
+                        <span id="pct-america" class="porcentaje-num">0%</span>
+                    </div>
+                    <div class="barra-base">
+                        <div id="barra-america" class="barra-progreso"></div>
+                    </div>
+                </div>
+
+                <!-- Asia -->
+                <div class="item-est">
+                    <div class="info-est">
+                        <span>Asia</span>
+                        <span id="pct-asia" class="porcentaje-num">0%</span>
+                    </div>
+                    <div class="barra-base">
+                        <div id="barra-asia" class="barra-progreso"></div>
+                    </div>
+                </div>
+
+                <!-- África -->
+                <div class="item-est">
+                    <div class="info-est">
+                        <span>África</span>
+                        <span id="pct-africa" class="porcentaje-num">0%</span>
+                    </div>
+                    <div class="barra-base">
+                        <div id="barra-africa" class="barra-progreso"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VENTANA MODAL RESUMEN GLOBAL (ESTILO BEEN) -->
+    <div id="modal-global" class="modal-overlay">
+        <div class="modal-contenido-est tarjeta-global">
+            <span class="cerrar-modal" onclick="cerrarModalGlobal()">&times;</span>
+
+            <h3 class="titulo-global">En Total</h3>
+
+            <div class="card-resumen-mundo">
+                <!-- Izquierda: Porcentaje -->
+                <div class="bloque-stat">
+                    <span id="pct-global-num" class="numero-destacado">0%</span>
+                    <span class="etiqueta-stat">Mundo</span>
+                </div>
+
+                <!-- Centro: Gráfico Circular -->
+                <div class="grafico-donut-container">
+                    <div id="grafico-donut" class="grafico-donut"></div>
+                </div>
+
+                <!-- Derecha: Cantidad de Países -->
+                <div class="bloque-stat">
+                    <span id="total-paises-num" class="numero-destacado">0</span>
+                    <span class="etiqueta-stat">Países</span>
+                </div>
+            </div>
+
+            <p class="pie-global">De los 195 países de la ONU</p>
+        </div>
+    </div>
+
+
+    <!-- MODAL TIMELINE (Colocar al final del <body>) -->
+<div id="modal-timeline" class="modal-overlay">
+    <div class="modal-contenido-timeline">
+        <span class="cerrar-modal" id="cerrar-timeline">&times;</span>
+        <h3 class="titulo-timeline">Timeline de Viajes</h3>
+        
+        <!-- Contenedor dinámico de la línea de tiempo -->
+        <div class="contenedor-timeline" id="timeline-lista">
+            <!-- JS inyectará el contenido ordenado por años aquí -->
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

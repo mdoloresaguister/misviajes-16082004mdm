@@ -3,6 +3,7 @@ window.misViajes = [
     
     {
         destino: "HUELVA",
+        pais: "España",
         fecha: "Abril de 2007",
         lat: 37.2583, 
         lng: -6.9508,
@@ -11,6 +12,7 @@ window.misViajes = [
     },
     {
         destino: "PARÍS",
+        pais: "Francia",
         fecha: "Agosto de 2008",
         lat: 48.8566,
         lng: 2.3522,
@@ -19,6 +21,7 @@ window.misViajes = [
     },
     {
         destino: "TENERIFE",
+        pais: "España",
         fecha: "Julio de 2009",
         lat: 28.2916, 
         lng: -16.6291,
@@ -27,6 +30,7 @@ window.misViajes = [
     },
     {
         destino: "PARÍS - HONEY MOON",
+        pais: "Francia",
         fecha: "Julio de 2010",
         lat: 48.8569,
         lng: 2.3529,
@@ -35,6 +39,7 @@ window.misViajes = [
     },
     {
         destino: "SEGOVIA - MADRID - ARANJUEZ",
+        pais: "España",
         fecha: "Noviembre de 2012",
         lat: 40.9480,
         lng: -4.1183,
@@ -43,6 +48,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR - SEMANA SANTA",
+        pais: "España",
         fecha: "Marzo de 2013",
         lat: 36.7025, // Variación sutil en el decimal para evitar solapamientos exactos
         lng: -2.7955,
@@ -51,6 +57,7 @@ window.misViajes = [
     },
     {
         destino: "ALPUJARRA GRANADINA",
+        pais: "España",
         fecha: "Noviembre de 2013",
         lat: 36.9318,
         lng: -3.3421,
@@ -59,6 +66,7 @@ window.misViajes = [
     },
     {
         destino: "BAÑOS DE LA ENCINA",
+        pais: "España",
         fecha: "Febrero de 2014",
         lat: 38.1697,
         lng: -3.7744,
@@ -67,6 +75,7 @@ window.misViajes = [
     },
     {
         destino: "Feria de los Pueblos Jaén",
+        pais: "España",
         fecha: "Marzo de 2014",
         lat: 37.7796,
         lng: -3.7849,
@@ -75,6 +84,7 @@ window.misViajes = [
     },
     {
         destino: "SALAMANCA - VALLE DEL JERTE - ALMAGRO",
+        pais: "España",
         fecha: "Abril de 2014",
         lat: 40.2185,
         lng: -5.9234,
@@ -83,6 +93,7 @@ window.misViajes = [
     },
     {
         destino: "ALGECIRAS Y TARIFA",
+        pais: "España",
         fecha: "Agosto de 2014",
         lat: 36.0754,
         lng: -5.5186,
@@ -91,6 +102,7 @@ window.misViajes = [
     },
     {
         destino: "CABO DE GATA",
+        pais: "España",
         fecha: "Noviembre de 2014",
         lat: 36.7589,
         lng: -2.2031,
@@ -99,6 +111,7 @@ window.misViajes = [
     },
     {
         destino: "ASTURIAS Y CANTABRIA",
+        pais: "España",
         fecha: "Enero de 2015",
         lat: 43.3000,
         lng: -4.5000,
@@ -107,6 +120,7 @@ window.misViajes = [
     },
     {
         destino: "SWINDON",
+        pais: "Reino Unido",
         fecha: "Agosto de 2015",
         lat: 51.5558,
         lng: -1.7797,
@@ -115,6 +129,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR - AMIGOS",
+        pais: "España",
         fecha: "Octubre de 2015",
         lat: 36.7029, // Nueva variación en los decimales para esta fecha
         lng: -2.7959,
@@ -123,6 +138,7 @@ window.misViajes = [
     },
     {
         destino: "SETENIL - SANLÚCAR - CHIPIONA Y PUERTO DE SANTA MARÍA",
+        pais: "España",
         fecha: "Enero de 2016",
         lat: 36.7201,
         lng: -6.2104,
@@ -131,6 +147,7 @@ window.misViajes = [
     },
     {
         destino: "MADRID",
+        pais: "España",
         fecha: "Mayo de 2016",
         lat: 40.4167,
         lng: -3.7037,
@@ -139,6 +156,7 @@ window.misViajes = [
     },
     {
         destino: "CRUCERO ITALIA",
+        pais: "Italia",
         fecha: "Julio de 2016",
         lat: 42.3000, // Coordenada en el Mar Tirreno central para situar el barco cerca de la costa italiana
         lng: 11.5000,
@@ -147,6 +165,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR",
+        pais: "España",
         fecha: "Julio de 2016",
         lat: 36.7032, // Variación en el cuarto decimal
         lng: -2.7962,
@@ -155,14 +174,16 @@ window.misViajes = [
     },
     {
         destino: "RONDA Y ANTEQUERA",
+        pais: "España",
         fecha: "Agosto de 2016",
         lat: 36.8850, // Punto medio estratégico entre ambas localidades malagueñas
         lng: -4.8010,
         imagen: "imagenes/ronda2016.jpg",
         linkDrive: "https://drive.google.com/drive/folders/1qKbYg29_Yn7E_t6YVHx2WLyIZI4Edt1N?usp=drive_link"
     },
-  {
+    {
         destino: "UBEDA y BAEZA",
+        pais: "España",
         fecha: "Noviembre de 2016",
         lat: 37.9890, // Centro de Úbeda
         lng: -3.3850,
@@ -171,6 +192,7 @@ window.misViajes = [
     },
     {
         destino: "OXFORD, BATH y LONDRES",
+        pais: "Reino Unido",
         fecha: "Diciembre de 2016",
         lat: 51.5800, // Punto intermedio entre Oxford, Bath y Londres
         lng: -1.3500,
@@ -179,6 +201,7 @@ window.misViajes = [
     },
     {
         destino: "EXTREMADURA",
+        pais: "España",
         fecha: "Enero de 2017",
         lat: 39.4000, // Coordenada central de la región extremeña
         lng: -6.1500,
@@ -187,6 +210,7 @@ window.misViajes = [
     },
     {
         destino: "GRANADA - PASEO DE LOS TRISTES",
+        pais: "España",
         fecha: "Enero de 2017",
         lat: 37.1793,
         lng: -3.5908,
@@ -195,6 +219,7 @@ window.misViajes = [
     },
     {
         destino: "LONDRES - AMIGOS",
+        pais: "Reino Unido",
         fecha: "Marzo de 2017",
         lat: 51.5074,
         lng: -0.1278,
@@ -203,6 +228,7 @@ window.misViajes = [
     },
     {
         destino: "SIERRA NEVADA - NOCHE EN BLANCO",
+        pais: "España",
         fecha: "Marzo de 2017",
         lat: 37.0951,
         lng: -3.4012,
@@ -211,6 +237,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR Y ROQUETAS",
+        pais: "España",
         fecha: "Abril de 2017",
         lat: 36.7320, // Punto intermedio entre la costa de Almerimar y Roquetas de Mar
         lng: -2.7110,
@@ -219,6 +246,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERÍA - COMIDA FRANCESA",
+        pais: "España",
         fecha: "Abril de 2017",
         lat: 36.8340,
         lng: -2.4637,
@@ -227,6 +255,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR",
+        pais: "España",
         fecha: "Julio de 2017",
         lat: 36.7035, // Variación en el cuarto decimal
         lng: -2.7965,
@@ -235,6 +264,7 @@ window.misViajes = [
     },
     {
         destino: "EL EJIDO",
+        pais: "España",
         fecha: "Julio de 2017",
         lat: 36.7761,
         lng: -2.8136,
@@ -243,6 +273,7 @@ window.misViajes = [
     },
     {
         destino: "ITALIA",
+        pais: "Italia",
         fecha: "Julio de 2017",
         lat: 41.8719, // Coordenada central del país (cerca de Roma)
         lng: 12.5674,
@@ -251,6 +282,7 @@ window.misViajes = [
     },
     {
         destino: "GALICIA",
+        pais: "España",
         fecha: "Agosto de 2017",
         lat: 42.5751, // Punto céntrico de la comunidad autónoma gallega
         lng: -8.1338,
@@ -259,6 +291,7 @@ window.misViajes = [
     },
     {
         destino: "CABO DE GATA - BAUTISMO BUCEO MANOLO",
+        pais: "España",
         fecha: "Octubre de 2017",
         lat: 36.7592, // Variación para el destino de buceo específico
         lng: -2.2035,
@@ -267,6 +300,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR",
+        pais: "España",
         fecha: "Noviembre de 2017",
         lat: 36.7038, // Variación en el cuarto decimal
         lng: -2.7968,
@@ -275,6 +309,7 @@ window.misViajes = [
     },
     {
         destino: "BRIGHTON",
+        pais: "Reino Unido",
         fecha: "Diciembre de 2017",
         lat: 50.8225,
         lng: -0.1372,
@@ -283,6 +318,7 @@ window.misViajes = [
     },
     {
         destino: "LANZAROTE",
+        pais: "España",
         fecha: "Enero de 2018",
         lat: 28.9630,
         lng: -13.6064,
@@ -291,6 +327,7 @@ window.misViajes = [
     },
     {
         destino: "MADRID",
+        pais: "España",
         fecha: "Marzo de 2018",
         lat: 40.4169, // Ajuste milimétrico para diferenciar del anterior Madrid
         lng: -3.7035,
@@ -299,6 +336,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR - SAN JUAN",
+        pais: "España",
         fecha: "Junio de 2018",
         lat: 36.7041,
         lng: -2.7971,
@@ -307,6 +345,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR",
+        pais: "España",
         fecha: "Julio de 2018",
         lat: 36.7044,
         lng: -2.7974,
@@ -315,6 +354,7 @@ window.misViajes = [
     },
     {
         destino: "NEW YORK",
+        pais: "Estados Unidos",
         fecha: "Julio de 2018",
         lat: 40.7128,
         lng: -74.0060,
@@ -323,6 +363,7 @@ window.misViajes = [
     },
     {
         destino: "NIÁGARA",
+        pais: "Canadá / Estados Unidos",
         fecha: "Julio de 2018",
         lat: 43.0962,
         lng: -79.0377,
@@ -331,6 +372,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR",
+        pais: "España",
         fecha: "Agosto de 2018",
         lat: 36.7047,
         lng: -2.7977,
@@ -339,14 +381,16 @@ window.misViajes = [
     },
     {
         destino: "FONTANAR - AMIGOS",
+        pais: "España",
         fecha: "Agosto de 2018",
         lat: 37.7958, // Fontanar (Jaén)
         lng: -3.1256,
         imagen: "imagenes/fontanar2018.jpg", 
         linkDrive: "https://drive.google.com/drive/folders/1l3KjUfXPUM6PV0VRfy8LfJmrj12XrBoG?usp=drive_link"
     },
-     {
+    {
         destino: "TOLEDO",
+        pais: "España",
         fecha: "Octubre de 2018",
         lat: 39.8628,
         lng: -4.0273,
@@ -355,6 +399,7 @@ window.misViajes = [
     },
     {
         destino: "EDIMBURGO",
+        pais: "Reino Unido",
         fecha: "Diciembre de 2018",
         lat: 55.9533,
         lng: -3.1883,
@@ -363,6 +408,7 @@ window.misViajes = [
     },
     {
         destino: "LAS PALMAS DE GRAN CANARIA",
+        pais: "España",
         fecha: "Enero de 2019",
         lat: 28.1235,
         lng: -15.4363,
@@ -371,14 +417,16 @@ window.misViajes = [
     },
     {
         destino: "CÁDIZ Y SEVILLA - AMIGOS",
+        pais: "España",
         fecha: "Febrero de 2019",
         lat: 36.9500, // Punto intermedio entre ambas provincias andaluzas
         lng: -6.1000,
         imagen: "imagenes/sevilla2019.jpg", 
         linkDrive: "https://drive.google.com/drive/folders/1SIvE0KO-dH8G3ePfIeEwuE5KGZPX4nSu?usp=drive_link"
     },
-       {
+    {
         destino: "PARACAIDAS MANOLO",
+        pais: "España",
         fecha: "Febrero de 2019",
         lat: 37.2947, // Centro de paracaidismo Skydive Spain (Aeródromo La Juliana, Sevilla)
         lng: -6.1632,
@@ -387,6 +435,7 @@ window.misViajes = [
     },
     {
         destino: "IBIZA",
+        pais: "España",
         fecha: "Marzo de 2019",
         lat: 38.9067,
         lng: 1.4206,
@@ -395,6 +444,7 @@ window.misViajes = [
     },
     {
         destino: "BRIGHTON",
+        pais: "Reino Unido",
         fecha: "Abril de 2019",
         lat: 50.8229, // Pequeño ajuste decimal sobre el anterior viaje a Brighton
         lng: -0.1368,
@@ -403,6 +453,7 @@ window.misViajes = [
     },
     {
         destino: "PRIEGO, CABRA Y MONTEFRÍO",
+        pais: "España",
         fecha: "Junio de 2019",
         lat: 37.3500, // Coordenada central del triángulo Priego de Córdoba - Cabra - Montefrío
         lng: -4.3000,
@@ -411,14 +462,34 @@ window.misViajes = [
     },
     {
         destino: "VENECIA Y VIENA",
+        pais: "Italia / Austria",
         fecha: "Julio de 2019",
         lat: 46.5000, // Punto intermedio geográfico entre el norte de Italia y Austria
         lng: 14.3000,
         imagen: "imagenes/venecia2019.jpg",
         linkDrive: "https://drive.google.com/drive/folders/11hyMM_q_TvhVjIwBSNJ8L2aIH4KN1y2G?usp=drive_link"
     }, 
-        {
+    {
+        destino: "CAZORLA - AMIGOS",
+        pais: "España",
+        fecha: "Agosto de 2019",
+        lat: 37.7958, // Fontanar (Jaén)
+        lng: -3.1256,
+        imagen: "imagenes/cazorla2019.jpg", 
+        linkDrive: "https://drive.google.com/drive/folders/1fpqp57rsIbKS0MIe_ALqZYwPEkO_TWyV?usp=drive_link"
+    },
+    {
+        destino: "ALMERIMAR",
+        pais: "España",
+        fecha: "Agosto de 2019",
+        lat: 36.7053, // Variación decimal
+        lng: -2.7983,
+        imagen: "imagenes/almerimar08_2019.jpg", 
+        linkDrive: "https://drive.google.com/drive/folders/1kF4fdG8wCC2r5RBJ4SGbs_-hv5pZPH1p?usp=drive_link"
+    },
+    {
         destino: "AMSTERDAM",
+        pais: "Países Bajos",
         fecha: "Octubre de 2019",
         lat: 52.3676,
         lng: 4.9041,
@@ -427,6 +498,7 @@ window.misViajes = [
     }, 
     {
         destino: "ALMERIMAR",
+        pais: "España",
         fecha: "Octubre de 2019",
         lat: 36.7050, // Variación decimal
         lng: -2.7980,
@@ -435,6 +507,7 @@ window.misViajes = [
     },
     {
         destino: "GRANADA - FSO",
+        pais: "España",
         fecha: "Noviembre de 2019",
         lat: 37.1755, // Variación para el concierto de la Film Symphony Orchestra en Granada
         lng: -3.5925,
@@ -443,6 +516,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR Y MOJACAR",
+        pais: "España",
         fecha: "Diciembre de 2019",
         lat: 36.9030, // Coordenada intermedia estratégica entre la costa de Almerimar y Mojácar
         lng: -2.3140,
@@ -451,6 +525,7 @@ window.misViajes = [
     },
     {
         destino: "GRANADA - COCHES ANTIGUOS TIO ALMUDENA",
+        pais: "España",
         fecha: "Diciembre de 2019",
         lat: 37.1812, // Variación decimal para este evento en Granada
         lng: -3.5995,
@@ -459,6 +534,7 @@ window.misViajes = [
     },
     {
         destino: "MIAMI",
+        pais: "Estados Unidos",
         fecha: "Enero de 2020",
         lat: 25.7617,
         lng: -80.1918,
@@ -467,14 +543,16 @@ window.misViajes = [
     },
     {
         destino: "LA RIOJA - LOGROÑO",
+        pais: "España",
         fecha: "Marzo de 2020",
-        lat: 42.4627,
-        lng: -2.4450,
+        lat: 42.3000,
+        lng: -2.5000,
         imagen: "imagenes/rioja2020.jpg",
         linkDrive: "https://drive.google.com/drive/folders/1HxDV4NicH5M2hjAESEvm79G3Y4pcr2Kj?usp=drive_link"
     },
     {
         destino: "ALMERÍA",
+        pais: "España",
         fecha: "Enero de 2021",
         lat: 36.8345, // Pequeño ajuste para diferenciar de la anterior visita
         lng: -2.4642,
@@ -483,6 +561,7 @@ window.misViajes = [
     },
     {
         destino: "TORRES - JAÉN",
+        pais: "España",
         fecha: "Abril de 2021",
         lat: 37.7856, // Torres (Jaén), en plena Sierra Mágina
         lng: -3.5104,
@@ -491,14 +570,16 @@ window.misViajes = [
     },
     {
         destino: "MENORCA",
+        pais: "España",
         fecha: "Agosto de 2021",
         lat: 39.9496, // Punto céntrico de la isla de Menorca
         lng: 4.1104,
         imagen: "imagenes/menorca2021.jpg",
         linkDrive: "https://drive.google.com/drive/folders/1Ne8nNLxT-4iaEtXPxOsLhRnL-V2_HdiA?usp=drive_link"
     },
-     {
+    {
         destino: "ESTEPONA",
+        pais: "España",
         fecha: "Enero de 2022",
         lat: 36.4256,
         lng: -5.1458,
@@ -507,6 +588,7 @@ window.misViajes = [
     },
     {
         destino: "FUERTEVENTURA",
+        pais: "España",
         fecha: "Enero de 2022",
         lat: 28.3587,
         lng: -14.0537,
@@ -514,7 +596,17 @@ window.misViajes = [
         linkDrive: "https://drive.google.com/drive/folders/1q_0xcj1LpZip7pvnGMQRX00eDD3erCv-?usp=drive_link"
     },
     {
+        destino: "MIRALRÍO (JAÉN)",
+        pais: "España",
+        fecha: "Marzo de 2022",
+        lat: 38.0069,
+        lng: -3.2982,
+        imagen: "imagenes/miralrio2022.jpg",
+        linkDrive: "https://drive.google.com/drive/folders/1OIxM3PetB29rIxDQKzxYEeLBTjghgJYm?usp=drive_link"
+    },
+    {
         destino: "JAÉN",
+        pais: "España",
         fecha: "Mayo de 2022",
         lat: 37.7796,
         lng: -3.7849,
@@ -522,7 +614,17 @@ window.misViajes = [
         linkDrive: "https://drive.google.com/drive/folders/1R_JGI6_eoJEraFTyelSybKtd2C8HHHvo?usp=drive_link"
     },
     {
+        destino: "PALOMARES (ALMERÍA) - PARAMOTOR",
+        pais: "España",
+        fecha: "Junio de 2022",
+        lat: 37.2486,
+        lng: -1.7961,
+        imagen: "imagenes/palomares2022.jpg", 
+        linkDrive: "https://drive.google.com/drive/folders/1VGQEot3ZfjwNGW2PjIRUHyn-SqlxIzjH?usp=drive_link"
+    },
+    {
         destino: "NÁPOLES - POMPEYA - AMALFI",
+        pais: "Italia",
         fecha: "Julio de 2022",
         lat: 40.7500, // Punto medio estratégico en la región de Campania (Italia)
         lng: 14.4300,
@@ -530,23 +632,17 @@ window.misViajes = [
         linkDrive: "https://drive.google.com/drive/folders/18duyOUtibbUKdi3WHI4XgN1D0O56zRSF?usp=drive_link"
     },
     {
-        destino: "CAZORLA",
+        destino: "CAZORLA Y CONCIERTO RAPHAEL",
+        pais: "España",
         fecha: "Agosto de 2022",
-        lat: 37.9134,
-        lng: -3.0036,
-        imagen: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600", 
-        linkDrive: "https://drive.google.com/drive/folders/1-8MY7PhxyqQTvclsM74Rt3JglVmXDQoP?usp=drive_link"
-    },
-       {
-        destino: "ALMERÍA - PARAMOTOR",
-        fecha: "Agosto de 2022",
-        lat: 36.8320, // Zona costera habitual de vuelo en Almería
-        lng: -2.4510,
-        imagen: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600", 
-        linkDrive: "https://drive.google.com/drive/folders/1VGQEot3ZfjwNGW2PjIRUHyn-SqlxIzjH?usp=drive_link"
+        lat: 37.9140, // Ligera variación para este evento musical en Cazorla
+        lng: -3.0028,
+        imagen: "imagenes/cazorla2022.jpg", 
+        linkDrive: "https://drive.google.com/drive/folders/18GPHe5hOxZs7PJRRNHTxFFN_dJpynvq6?usp=drive_link"
     },
     {
         destino: "GRANADA - RESTAURANTE MARIA DE LA O",
+        pais: "España",
         fecha: "Enero de 2023",
         lat: 37.1741, // Ubicación aproximada en el barrio de la Carretera de la Sierra en Granada
         lng: -3.5852,
@@ -555,6 +651,7 @@ window.misViajes = [
     },
     {
         destino: "REPÚBLICA DOMINICANA (PUNTA CANA)",
+        pais: "República Dominicana",
         fecha: "Enero de 2023",
         lat: 18.5601,
         lng: -68.3725,
@@ -563,6 +660,7 @@ window.misViajes = [
     },
     {
         destino: "MADRID - BURGOS - SAN SEBASTIÁN - NAVARRA",
+        pais: "España",
         fecha: "Abril de 2023",
         lat: 42.6000, // Punto intermedio de la ruta hacia el norte de España
         lng: -2.3000,
@@ -571,6 +669,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR",
+        pais: "España",
         fecha: "Julio de 2023",
         lat: 36.7053, // Variación decimal
         lng: -2.7983,
@@ -579,14 +678,16 @@ window.misViajes = [
     },
     {
         destino: "JAPÓN",
+        pais: "Japón",
         fecha: "Julio de 2023",
         lat: 35.6762, // Centrado en Tokio por defecto para ubicar el país
         lng: 139.6503,
         imagen: "imagenes/japon2023.jpg", 
         linkDrive: "https://drive.google.com/drive/folders/1wCEnNDpj4F3Xk7y8SBLKayrzTyTPKuwv?usp=drive_link"
     },
-     {
+    {
         destino: "MADRID - LA GRANJA",
+        pais: "España",
         fecha: "Julio de 2023",
         lat: 40.8914, // Punto medio entre Madrid capital y San Ildefonso (La Granja)
         lng: -3.9850,
@@ -594,7 +695,26 @@ window.misViajes = [
         linkDrive: "https://drive.google.com/drive/folders/1k__mnmXGLxUU40PmDNPmzjrvcnx2viv7?usp=drive_link"
     },
     {
+        destino: "CANGAS DEL NARCEA",
+        pais: "España",
+        fecha: "Octubre de 2023",
+        lat: 40.8914, // Punto medio entre Madrid capital y San Ildefonso (La Granja)
+        lng: -3.9850,
+        imagen: "imagenes/cangas2023.jpg", 
+        linkDrive: "https://drive.google.com/drive/folders/1d0iFp-PH_fazsXA7569IFHN8OfMleSsK?usp=drive_link"
+    },
+    {
+        destino: "CÓRDOBA",
+        pais: "España",
+        fecha: "Octubre de 2023",
+        lat: 37.8882,
+        lng: -4.7794,
+        imagen: "imagenes/cordoba2023.jpg", 
+        linkDrive: "https://drive.google.com/drive/folders/1YdbyA6nKSeu-4T5juJpIe8co7Cprvtzg?usp=drive_link"
+    },
+    {
         destino: "LA PALMA",
+        pais: "España",
         fecha: "Enero de 2024",
         lat: 28.6835,
         lng: -17.8610,
@@ -602,7 +722,17 @@ window.misViajes = [
         linkDrive: "https://drive.google.com/drive/folders/1lH3VlaQuUl50jYPgd6bbE5bCUV07j8M1?usp=drive_link"
     },
     {
+        destino: "MECINA BOMBARÓ (GRANADA) - AMIGOS",
+        pais: "España",
+        fecha: "Febrero de 2024",
+        lat: 36.9535,
+        lng: -3.0903,
+        imagen: "imagenes/mecinabombaro2024.jpg",
+        linkDrive: "https://drive.google.com/drive/folders/1oBuYq8N7GxPjgfD7XctSzRWcEu_HLr3K?usp=drive_link"
+    },
+    {
         destino: "BÉLGICA",
+        pais: "Bélgica",
         fecha: "Febrero de 2024",
         lat: 50.8503, // Centrado por defecto en Bruselas
         lng: 4.3517,
@@ -611,6 +741,7 @@ window.misViajes = [
     },
     {
         destino: "GRANADA - PALACIO DE LOS PATOS",
+        pais: "España",
         fecha: "Marzo de 2024",
         lat: 37.1729, // Ajuste para el emblemático hotel céntrico de Granada
         lng: -3.6015,
@@ -619,14 +750,16 @@ window.misViajes = [
     },
     {
         destino: "BAEZA",
+        pais: "España",
         fecha: "Mayo de 2024",
         lat: 37.9944, // Pequeño ajuste decimal sobre la anterior Úbeda/Baeza
         lng: -3.4710,
         imagen: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600",
-        linkDrive: "Phttps://drive.google.com/drive/folders/1-0Kp-vT8lAi9gTLpQyPZRNxxdwKXP53b?usp=drive_link"
+        linkDrive: "https://drive.google.com/drive/folders/1-0Kp-vT8lAi9gTLpQyPZRNxxdwKXP53b?usp=drive_link"
     },
     {
         destino: "TAILANDIA",
+        pais: "Tailandia",
         fecha: "Julio de 2024",
         lat: 13.7563, // Centrado por defecto en Bangkok
         lng: 100.5018,
@@ -635,6 +768,7 @@ window.misViajes = [
     },
     {
         destino: "CANGAS DEL NARCEA",
+        pais: "España",
         fecha: "Agosto de 2024",
         lat: 43.1754,
         lng: -6.5502,
@@ -642,15 +776,8 @@ window.misViajes = [
         linkDrive: "https://drive.google.com/drive/folders/1-JjHj_i93Cs6HGsZYZNJbMz9VIUZzWk4?usp=drive_link"
     },
     {
-        destino: "CAZORLA Y CONCIERTO RAPHAEL",
-        fecha: "Agosto de 2024",
-        lat: 37.9140, // Ligera variación para este evento musical en Cazorla
-        lng: -3.0028,
-        imagen: "imagenes/cazorla2024.jpg", 
-        linkDrive: "https://drive.google.com/drive/folders/18GPHe5hOxZs7PJRRNHTxFFN_dJpynvq6?usp=drive_link"
-    },
-    {
         destino: "GRANADA PRIMAS MALLORCA",
+        pais: "España",
         fecha: "Agosto de 2024",
         lat: 37.1765, // Variación para este encuentro familiar
         lng: -3.5895,
@@ -659,6 +786,7 @@ window.misViajes = [
     },
     {
         destino: "ALSACIA",
+        pais: "Francia",
         fecha: "Diciembre de 2024",
         lat: 48.3000, // Coordenada central de la región francesa de la Alsacia
         lng: 7.4500,
@@ -667,6 +795,7 @@ window.misViajes = [
     },
     {
         destino: "EL HIERRO - CANARIAS",
+        pais: "España",
         fecha: "Enero de 2025",
         lat: 27.7342,
         lng: -18.0163,
@@ -675,6 +804,7 @@ window.misViajes = [
     },
     {
         destino: "GRANADA - VIAJE EN GLOBO",
+        pais: "España",
         fecha: "Enero de 2025",
         lat: 37.1825, // Variación decimal para situar la zona de despegue/vuelo
         lng: -3.6120,
@@ -683,6 +813,7 @@ window.misViajes = [
     },
     {
         destino: "CANTABRIA",
+        pais: "España",
         fecha: "Mayo de 2025",
         lat: 43.2000, // Ajuste para diferenciar del anterior viaje Cantabria-Asturias
         lng: -4.0000,
@@ -691,6 +822,7 @@ window.misViajes = [
     },
     {
         destino: "TREVELEZ",
+        pais: "España",
         fecha: "Mayo de 2025",
         lat: 36.9257, // Trévelez, en plena Alpujarra Granadina
         lng: -3.2642,
@@ -699,6 +831,7 @@ window.misViajes = [
     },
     {
         destino: "CANCÚN",
+        pais: "México",
         fecha: "Julio de 2025",
         lat: 21.1619,
         lng: -86.8515,
@@ -707,6 +840,7 @@ window.misViajes = [
     },
     {
         destino: "CANGAS DEL NARCEA",
+        pais: "España",
         fecha: "Agosto de 2025",
         lat: 43.1758, // Variación de decimales sobre la visita del año anterior
         lng: -6.5495,
@@ -715,6 +849,7 @@ window.misViajes = [
     },
     {
         destino: "GEODA DE PULPÍ",
+        pais: "España",
         fecha: "Septiembre de 2025",
         lat: 37.3615, // Ubicación específica de la geoda en el Pilar de Jaravía (Pulpí)
         lng: -1.7018,
@@ -723,6 +858,7 @@ window.misViajes = [
     },
     {
         destino: "LA HERRADURA - BUCEO",
+        pais: "España",
         fecha: "Septiembre de 2025",
         lat: 36.7346, // La Herradura (Granada)
         lng: -3.7383,
@@ -731,6 +867,7 @@ window.misViajes = [
     },
     {
         destino: "CÁDIZ",
+        pais: "España",
         fecha: "Noviembre de 2025",
         lat: 36.5271, // Ciudad de Cádiz capital
         lng: -6.2886,
@@ -739,6 +876,7 @@ window.misViajes = [
     },
     {
         destino: "CABO VERDE",
+        pais: "Cabo Verde",
         fecha: "Enero de 2026",
         lat: 16.0021, // Coordenada intermedia del archipiélago de Cabo Verde
         lng: -24.0132,
@@ -747,6 +885,7 @@ window.misViajes = [
     },
     {
         destino: "ALMERIMAR",
+        pais: "España",
         fecha: "A lo largo de los años",
         lat: 36.7056, // Variación céntrica para el recopilatorio general histórico
         lng: -2.7986,
@@ -1065,4 +1204,311 @@ window.addEventListener('click', (e) => {
     if (e.target === modal) {
         cerrarModalMapa();
     }
+});
+
+// LÓGICA DE LA VENTANA DE ESTADÍSTICAS (CORREGIDA)
+function calcularEstadisticasViajes() {
+    if (typeof misViajes === 'undefined') return;
+
+    // Totales estimados por continente
+    const TOTAL_MUNDO = 195;
+    const TOTAL_EUROPA = 44;
+    const TOTAL_AMERICA = 35;
+    const TOTAL_ASIA = 48;
+    const TOTAL_AFRICA = 54;
+
+    let paisesVisitados = new Set();
+    let europa = new Set();
+    let america = new Set();
+    let asia = new Set();
+    let africa = new Set();
+
+    misViajes.forEach(v => {
+        if (!v.lat || !v.lng) return;
+
+        const dest = v.destino.toUpperCase();
+
+        // Lista de excepciones europeas situadas geográficamente cerca de África (Canarias, Ceuta, Melilla, Madeira, etc.)
+        const esExcepcionEuropea = dest.includes("CANARIAS") || 
+                                   dest.includes("TENERIFE") || 
+                                   dest.includes("GRAN CANARIA") || 
+                                   dest.includes("LANZAROTE") || 
+                                   dest.includes("FUERTEVENTURA") || 
+                                   dest.includes("LA PALMA") || 
+                                   dest.includes("LA GOMERA") || 
+                                   dest.includes("EL HIERRO") ||
+                                   dest.includes("CEUTA") ||
+                                   dest.includes("MELILLA");
+
+        // Clasificación
+        if (esExcepcionEuropea || (v.lat > 34 && v.lng > -25 && v.lng < 45)) {
+            // Se fuerza Europa si es Canarias/Ceuta/Melilla o si está por coordenadas europeas
+            europa.add(dest);
+        } else if (v.lng < -30) {
+            // América
+            america.add(dest);
+        } else if (v.lng > 45 || (v.lat > 0 && v.lng > 60)) {
+            // Asia
+            asia.add(dest);
+        } else if (v.lat < 35 && v.lat > -35 && v.lng > -20 && v.lng < 50) {
+            // África
+            africa.add(dest);
+        } else {
+            // Por defecto
+            europa.add(dest);
+        }
+
+        paisesVisitados.add(dest);
+    });
+
+    // Función auxiliar para actualizar números y animar barra
+    function actualizarBarra(idPct, idBarra, visitados, total) {
+        // Para que se sienta más representativo, calculamos el porcentaje
+        let pct = Math.min(Math.round((visitados.size / total) * 100), 100);
+        
+        // Si tienes muchos viajes locales, aseguramos un % visible mínimo si hay visitas
+        if (visitados.size > 0 && pct === 0) pct = 1; 
+
+        document.getElementById(idPct).innerText = pct + "% (" + visitados.size + " zonas)";
+        document.getElementById(idBarra).style.width = Math.max(pct, visitados.size > 0 ? 5 : 0) + "%";
+    }
+
+    // Actualizamos la interfaz
+    actualizarBarra("pct-mundo", "barra-mundo", paisesVisitados, TOTAL_MUNDO);
+    actualizarBarra("pct-europa", "barra-europa", europa, TOTAL_EUROPA);
+    actualizarBarra("pct-america", "barra-america", america, TOTAL_AMERICA);
+    actualizarBarra("pct-asia", "barra-asia", asia, TOTAL_ASIA);
+    actualizarBarra("pct-africa", "barra-africa", africa, TOTAL_AFRICA);
+}
+
+function abrirModalEstadisticas() {
+    const modal = document.getElementById("modal-estadisticas");
+    modal.classList.add("activo"); // Muestra la ventana
+    calcularEstadisticasViajes(); // Anima las barras
+}
+
+function cerrarModalEstadisticas() {
+    const modal = document.getElementById("modal-estadisticas");
+    modal.classList.remove("activo"); // Oculta la ventana
+}
+
+// Detección del País basado en la propiedad "pais" si existe, o en la búsqueda por nombre del Destino
+function obtenerPaisDelDestino(viaje) {
+    if (viaje.pais) return viaje.pais;
+
+    const d = viaje.destino.toUpperCase();
+
+    if (d.includes("NEW YORK") || d.includes("MIAMI") || d.includes("USA") || d.includes("EEUU")) return "Estados Unidos";
+    if (d.includes("MÉXICO") || d.includes("CANCÚN")) return "México";
+    if (d.includes("PUNTA CANA") || d.includes("DOMINICANA")) return "República Dominicana";
+    if (d.includes("LONDRES") || d.includes("UK")) return "Reino Unido";
+    if (d.includes("PARÍS") || d.includes("FRANCIA")) return "Francia";
+    if (d.includes("ROMA") || d.includes("ITALIA")) return "Italia";
+
+    // Por defecto, la mayoría de tus entradas locales pertenecen a España
+    return "España";
+}
+
+// LÓGICA DEL RESUMEN GLOBAL
+function calcularResumenGlobal() {
+    if (typeof misViajes === 'undefined') return;
+
+    const TOTAL_PAISES_ONU = 195;
+    let paisesUnicos = new Set();
+
+    // Contamos únicamente países únicos
+    misViajes.forEach(v => {
+        if (v.destino) {
+            let pais = obtenerPaisDelDestino(v);
+            paisesUnicos.add(pais);
+        }
+    });
+
+    let totalPaises = paisesUnicos.size;
+    let porcentaje = Math.round((totalPaises / TOTAL_PAISES_ONU) * 100);
+
+    // Actualizamos los textos
+    document.getElementById("total-paises-num").innerText = totalPaises;
+    document.getElementById("pct-global-num").innerText = porcentaje + "%";
+
+    // Animamos el gráfico Donut con CSS
+    const donut = document.getElementById("grafico-donut");
+    donut.style.background = `conic-gradient(#f2a649 ${porcentaje}%, #e6e6e6 ${porcentaje}% 100%)`;
+}
+
+// Abrir y Cerrar Modal Global
+function abrirModalGlobal() {
+    const modal = document.getElementById("modal-global");
+    modal.classList.add("activo");
+    calcularResumenGlobal();
+}
+
+function cerrarModalGlobal() {
+    const modal = document.getElementById("modal-global");
+    modal.classList.remove("activo");
+}
+
+// --- FUNCIONALIDAD MODAL TIMELINE ---
+
+// Esperar a que todo el HTML esté cargado en el navegador
+document.addEventListener('DOMContentLoaded', () => {
+
+    const btnTimeline = document.getElementById('btn-timeline');
+    const modalTimeline = document.getElementById('modal-timeline');
+    const cerrarTimeline = document.getElementById('cerrar-timeline');
+    const timelineLista = document.getElementById('timeline-lista');
+
+    // Verificar si el botón existe en el HTML
+    if (!btnTimeline) {
+        console.error("Error: No se encontró el elemento con id='btn-timeline' en el HTML.");
+        return;
+    }
+
+    // Abrir modal al hacer clic
+    btnTimeline.addEventListener('click', () => {
+        generarTimeline();
+        if (modalTimeline) {
+            modalTimeline.classList.add('activo');
+        }
+    });
+
+    // Cerrar modal con la X
+    if (cerrarTimeline) {
+        cerrarTimeline.addEventListener('click', () => {
+            modalTimeline.classList.remove('activo');
+        });
+    }
+
+    // Cerrar al hacer clic en el fondo oscuro
+    if (modalTimeline) {
+        modalTimeline.addEventListener('click', (e) => {
+            if (e.target === modalTimeline) {
+                modalTimeline.classList.remove('activo');
+            }
+        });
+    }
+
+    // Función para renderizar el Timeline
+function generarTimeline() {
+    if (!timelineLista) return;
+    timelineLista.innerHTML = ''; 
+
+    let listaDatos = [];
+    if (typeof misViajes !== 'undefined') listaDatos = misViajes;
+    else if (typeof viajes !== 'undefined') listaDatos = viajes;
+    else if (typeof datosViajes !== 'undefined') listaDatos = datosViajes;
+    else if (typeof listaViajes !== 'undefined') listaDatos = listaViajes;
+
+    if (!listaDatos || listaDatos.length === 0) {
+        timelineLista.innerHTML = '<p style="text-align:center; color:#84a59d; padding:20px;">No se encontraron viajes para mostrar.</p>';
+        return;
+    }
+
+    // Diccionario ampliado de países y destinos clave
+    const mapaCodigosPais = {
+        // Canadá y Destinos específicos
+        'canada': 'ca', 'canadá': 'ca', 'niagara': 'ca', 'cataratas del niagara': 'ca', 'toronto': 'ca', 'montreal': 'ca', 'quebec': 'ca', 'vancouver': 'ca',
+
+        // América
+        'estados unidos': 'us', 'usa': 'us', 'eeuu': 'us', 'nueva york': 'us', 'miami': 'us',
+        'república dominicana': 'do', 'republica dominicana': 'do', 'dominican republic': 'do', 'dominicana': 'do',
+        'mexico': 'mx', 'méxico': 'mx', 'argentina': 'ar', 'brasil': 'br', 'brazil': 'br', 
+        'colombia': 'co', 'chile': 'cl', 'peru': 'pe', 'perú': 'pe', 'cuba': 'cu', 'costa rica': 'cr',
+
+        // África y Cabo Verde
+        'cabo verde': 'cv', 'caboverde': 'cv', 'cape verde': 'cv',
+        'marruecos': 'ma', 'egipto': 'eg', 'tunez': 'tn', 'senegal': 'sn', 'kenia': 'ke', 'sudafrica': 'za',
+
+        // Europa
+        'belgica': 'be', 'bélgica': 'be', 'belgium': 'be',
+        'españa': 'es', 'spain': 'es',
+        'francia': 'fr', 'france': 'fr', 'paris': 'fr', 'parís': 'fr',
+        'italia': 'it', 'italy': 'it', 'roma': 'it',
+        'alemania': 'de', 'germany': 'de',
+        'reino unido': 'gb', 'uk': 'gb', 'inglaterra': 'gb', 'londres': 'gb',
+        'portugal': 'pt', 'lisboa': 'pt',
+        'grecia': 'gr', 'greece': 'gr', 'suiza': 'ch', 'switzerland': 'ch',
+        'holanda': 'nl', 'paises bajos': 'nl', 'países bajos': 'nl', 'netherlands': 'nl', 'amsterdam': 'nl',
+        'austria': 'at', 'croacia': 'hr', 'irlanda': 'ie', 'polonia': 'pl', 
+        'noruega': 'no', 'suecia': 'se', 'dinamarca': 'dk', 'finlandia': 'fi',
+
+        // Asia y Oceanía
+        'japon': 'jp', 'japón': 'jp', 'japan': 'jp', 'tokio': 'jp',
+        'tailandia': 'th', 'thailand': 'th', 'bangkok': 'th',
+        'turquia': 'tr', 'turquía': 'tr', 'turkey': 'tr', 'estambul': 'tr',
+        'australia': 'au', 'indonesia': 'id', 'bali': 'id',
+        'maldivas': 'mv', 'maldives': 'mv', 'vietnam': 'vn'
+    };
+
+    function limpiarTexto(texto) {
+        return (texto || '')
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
+    }
+
+    function obtenerCodigoISO(viaje) {
+        if (viaje.codigoPais && viaje.codigoPais.length === 2) return viaje.codigoPais.toLowerCase();
+        if (viaje.iso && viaje.iso.length === 2) return viaje.iso.toLowerCase();
+        if (viaje.pais && viaje.pais.length === 2) return viaje.pais.toLowerCase();
+
+        const textoLimpio = limpiarTexto(`${viaje.pais || ''} ${viaje.destino || ''} ${viaje.titulo || ''} ${viaje.nombre || ''}`);
+        
+        for (const [nombrePais, codigo] of Object.entries(mapaCodigosPais)) {
+            const nombrePaisLimpio = limpiarTexto(nombrePais);
+            if (textoLimpio.includes(nombrePaisLimpio)) {
+                return codigo;
+            }
+        }
+        return null;
+    }
+
+    // 1. Agrupar viajes por año
+    const viajesPorAno = {};
+    listaDatos.forEach(viaje => {
+        const ano = viaje.ano || viaje.año || (viaje.fecha ? viaje.fecha.slice(-4) : 'Otros');
+        if (!viajesPorAno[ano]) viajesPorAno[ano] = [];
+        viajesPorAno[ano].push(viaje);
+    });
+
+    // 2. Ordenar años descendente
+    const anosOrdenados = Object.keys(viajesPorAno).sort((a, b) => b - a);
+
+    // 3. Renderizar HTML
+    anosOrdenados.forEach(ano => {
+        const bloqueAno = document.createElement('div');
+        bloqueAno.className = 'bloque-ano-timeline';
+
+        let htmlBloque = `<div class="cabecera-ano">${ano}</div>`;
+
+        viajesPorAno[ano].forEach(viaje => {
+            const destino = viaje.destino || viaje.titulo || viaje.nombre || 'Destino';
+            const fecha = viaje.mesAno || viaje.fecha || `${viaje.mes || ''} ${ano}`.trim();
+            
+            const codigoISO = obtenerCodigoISO(viaje);
+            
+            let htmlBandera = '';
+            if (codigoISO) {
+                htmlBandera = `<div class="item-timeline-bandera-mini"><img src="https://flagcdn.com/w80/${codigoISO}.png" alt="Bandera" loading="lazy"></div>`;
+            } else if (viaje.bandera) {
+                htmlBandera = `<span style="font-size: 1.1rem;">${viaje.bandera}</span>`;
+            } else {
+                htmlBandera = `<span style="font-size: 1rem;">🇨🇦</span>`; // Fallback Canadá
+            }
+
+            htmlBloque += `
+                <div class="item-timeline">
+                    <div class="fila-destino-timeline">
+                        ${htmlBandera}
+                        <span class="nombre-destino-timeline">${destino}</span>
+                    </div>
+                    <div class="fecha-timeline">${fecha}</div>
+                </div>
+            `;
+        });
+
+        bloqueAno.innerHTML = htmlBloque;
+        timelineLista.appendChild(bloqueAno);
+    });
+}
 });
